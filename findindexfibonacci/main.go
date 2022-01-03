@@ -9,22 +9,21 @@ func main() {
 	var n int
 	var arr []int
 	arr = []int{
-		0, 1,
+		1, 1,
 	}
 	fmt.Scan(&n)
-	for i := 2; i <= n+1; i++ {
+
+	for i := 2; i <= n; i++ {
 		arr = append(arr, arr[i-1]+arr[i-2])
 	}
 
 	fmt.Println(arr)
 
 	for i, v := range arr {
-		if n == v {
-			fmt.Println(i + 1)
+		if n == i+1 {
+			fmt.Println(v)
 			return
 		}
 	}
-
-	fmt.Println(-1)
 
 }
