@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Player struct {
 	On    bool
 	Ammo  int
@@ -29,5 +31,10 @@ func (p *Player) RideBike() bool {
 }
 
 func main() {
-
+	testStrct := &Player{
+		On:    true,
+		Ammo:  20,
+		Power: 30,
+	}
+	fmt.Println(testStrct.RideBike())
 }
